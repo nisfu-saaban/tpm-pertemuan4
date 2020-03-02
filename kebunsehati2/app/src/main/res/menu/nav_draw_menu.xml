@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/nav_home_menu"
+            android:icon="@drawable/ic_home_"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_chart"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="Keranjang" />
+
+        <item
+            android:id="@+id/nav_transaksi"
+            android:icon="@drawable/ic_local_offer"
+            android:title="Transaksi" />
+    </group>
+
+    <item android:title="Pengaturan Akun">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_person_pin"
+                android:title="Akun" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit"
+                android:title="Log Out" />
+
+        </menu>
+
+    </item>
+
+</menu>
