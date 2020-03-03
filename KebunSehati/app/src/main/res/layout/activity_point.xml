@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abuabumuda">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/icoBack"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:layout_toRightOf="@id/icoBack"
+            android:layout_marginLeft="20dp"
+            android:text="Poin Kebun Sehati"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/blockYourPoint"
+        android:layout_below="@id/blockHeader"
+        android:background="@android:color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/icoPoint"
+            android:src="@drawable/coint"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtYourPoint"
+            android:text="Poin Anda"
+            android:layout_toRightOf="@id/icoPoint"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPoint"
+            android:text="0"
+            android:layout_toRightOf="@id/icoPoint"
+            android:layout_below="@id/txtYourPoint"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockRiwayatTransaksi"
+        android:layout_below="@id/blockYourPoint"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleRiwayatTransaksi"
+            android:text="Riwayat Transaksi Poin"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noTransaksi"
+            android:layout_below="@id/txtTitleRiwayatTransaksi"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Belum ada data transaksi poin"
+            android:textColor="@android:color/holo_red_dark"
+            android:paddingBottom="30dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

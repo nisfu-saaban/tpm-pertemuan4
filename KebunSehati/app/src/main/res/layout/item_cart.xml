@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:id="@+id/imgProduk"
+        android:src="@drawable/noimage"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNamaProduk"
+        android:layout_toRightOf="@id/imgProduk"
+        android:layout_marginLeft="20dp"
+        android:text="Apel Lokal Hijau"
+        android:textSize="14dp"
+        android:maxLines="2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBeratProduk"
+        android:layout_toRightOf="@id/imgProduk"
+        android:layout_below="@id/txtNamaProduk"
+        android:layout_marginLeft="20dp"
+        android:text="300 gram"
+        android:textSize="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHargaProduk"
+        android:layout_toRightOf="@id/imgProduk"
+        android:layout_below="@id/txtBeratProduk"
+        android:layout_marginLeft="20dp"
+        android:text="IDR 7.000"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="14dp"/>
+
+    <com.travijuu.numberpicker.library.NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_below="@id/txtHargaProduk"
+        android:layout_alignParentRight="true"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        numberpicker:min="1"
+        numberpicker:max="100"
+        numberpicker:value="-5"
+        numberpicker:unit="1"
+        numberpicker:focusable="false"
+        numberpicker:custom_layout="@layout/number_picker"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:id="@+id/icoTrash"
+        android:src="@drawable/trash"
+        android:layout_below="@id/txtHargaProduk"
+        android:layout_toLeftOf="@id/number_picker"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

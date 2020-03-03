@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools"
+    android:background="@color/warnaHitamTrans">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:padding="20dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/icoClose"
+            android:src="@drawable/close"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleInputAlamat"
+            android:layout_toRightOf="@id/icoClose"
+            android:layout_marginLeft="20dp"
+            android:text="Isikan alamat lengkap anda"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpAlamat"
+            android:layout_below="@id/txtTitleInputAlamat"
+            android:layout_marginTop="10dp"
+            android:hint="Alamat detail anda"
+            android:textSize="14dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSearchAddress"
+            android:text="Tampilkan di Peta"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

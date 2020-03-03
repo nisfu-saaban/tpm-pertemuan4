@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools"
+    android:background="@color/abuabumuda">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/icoBack"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:layout_toRightOf="@id/icoBack"
+            android:layout_marginLeft="20dp"
+            android:text="Pengiriman"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/blockHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockAlamat"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtAlamat"
+                    android:text="Alamat Pengiriman"
+                    android:textSize="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtAddress"
+                    android:layout_below="@id/txtAlamat"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnEditAlamat"
+                    android:text="Ganti Alamat"
+                    android:layout_below="@id/txtAddress"
+                    android:background="@android:color/holo_green_dark"
+                    android:textColor="@android:color/white"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockTanggal"
+                android:layout_below="@id/blockAlamat"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTanggalPengiriman"
+                    android:text="Tanggal Pengiriman"
+                    android:textSize="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTanggal"
+                    android:layout_below="@id/txtTanggalPengiriman"
+                    android:layout_marginTop="20dp"
+                    android:text="12 Oktober 2019"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnEditTanggal"
+                    android:text="Ganti Tanggal"
+                    android:layout_below="@id/txtTanggal"
+                    android:background="@android:color/holo_green_dark"
+                    android:textColor="@android:color/white"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockJadwal"
+                android:layout_below="@id/blockTanggal"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitleJadwal"
+                    android:text="Jadwal Pengiriman"
+                    android:textSize="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="5dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockPilihanJadwal"
+                    android:layout_below="@+id/txtTitleJadwal"
+                    android:layout_marginTop="10dp">
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockPembayaran"
+                android:layout_below="@id/blockJadwal"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitlePembayaran"
+                    android:text="Cara Pembayaran"
+                    android:textSize="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="5dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockPilihanPembayaran"
+                    android:layout_below="@+id/txtTitlePembayaran"
+                    android:layout_marginTop="10dp">
+
+
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockRekap"
+                android:layout_below="@id/blockPembayaran"
+                android:background="@android:color/white"
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTitleRekap"
+                    android:text="Ringkasan Belanja"
+                    android:textSize="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockTotalBelanja"
+                    android:layout_below="@id/txtTitleRekap"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTitleTotalBelanja"
+                        android:layout_alignParentLeft="true"
+                        android:text="Total Belanja (4 item)"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNilaiTotalBelanja"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/holo_orange_dark"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockTotalOngkir"
+                    android:layout_below="@id/blockTotalBelanja"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTitleTotalOngkir"
+                        android:layout_alignParentLeft="true"
+                        android:text="Total Ongkos Kirim"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNilaiTotalOngkir"
+                        android:layout_alignParentRight="true"
+                        android:text="GRATIS"
+                        android:textColor="@android:color/holo_orange_dark"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockTotalTagihan"
+                    android:layout_below="@id/blockTotalOngkir"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTitleTotalTagihan"
+                        android:layout_alignParentLeft="true"
+                        android:text="Total Tagihan"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtNilaiTotalTagihan"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@android:color/holo_orange_dark"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnBeli"
+                android:layout_below="@id/blockRekap"
+                android:text="Beli Sekarang"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

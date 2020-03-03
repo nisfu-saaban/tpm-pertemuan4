@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_launcher_home"
+
+         />
+
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/ic_launcher_order"
+         />
+
+    <!--<item
+        android:id="@+id/keranjang"
+        android:icon="@drawable/ic_launcher_keranjang"
+        />-->
+
+    <item
+        android:id="@+id/inbox"
+        android:icon="@drawable/ic_launcher_inbox"
+        />
+
+    <item
+        android:id="@+id/akunmember"
+        android:icon="@drawable/ic_launcher_akun"
+       />
+
+</menu>

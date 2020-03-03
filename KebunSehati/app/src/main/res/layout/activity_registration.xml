@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockTitle"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/logo"
+            android:src="@drawable/splash"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockNama"
+        android:layout_below="@id/blockTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNama"
+            android:text="Nama"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpNama"
+            android:layout_below="@id/txtNama"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:hint="Nama Lengkap"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockEmail"
+        android:layout_below="@id/blockNama"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEmail"
+            android:text="Email"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpEmail"
+            android:layout_below="@id/txtEmail"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:hint="Alamat Email"
+            android:textSize="16dp"
+            android:inputType="textEmailAddress"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockPIN"
+        android:layout_below="@id/blockEmail"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPIN"
+            android:text="PIN"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpPIN"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/txtPIN"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:hint="PIN"
+            android:textSize="16dp"
+            android:inputType="number"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLanjutkan"
+        android:layout_below="@id/blockPIN"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Lanjutkan"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

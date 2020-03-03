@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "228308945849",
+    "firebase_url": "https://kebun-sehati-19d5e.firebaseio.com",
+    "project_id": "kebun-sehati-19d5e",
+    "storage_bucket": "kebun-sehati-19d5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228308945849:android:bcdeaadb36d1d12b284468",
+        "android_client_info": {
+          "package_name": "ventures.g45.kebunsehati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228308945849-egu5l71di3flif68o90fpcmk01t2k1fr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDixJBMK_Oredi8eY-0IWTWpNqn0YpwuJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228308945849-egu5l71di3flif68o90fpcmk01t2k1fr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

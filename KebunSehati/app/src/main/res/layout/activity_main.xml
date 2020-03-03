@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockHeader">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/top_bg"/>
+
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inpSearch"
+                    android:hint="Cari Apel Malang"
+                    android:background="@drawable/edittext_border"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="6dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:textSize="14dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockNotif"
+                    android:layout_toRightOf="@id/inpSearch"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:id="@+id/notifBell"
+                        android:src="@drawable/ic_launcher_keranjang"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTotalCart"
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:text="99"
+                        android:textSize="10dp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="1dp"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/blockPoint"
+                    android:layout_below="@id/blockNotif"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:padding="10dp">
+
+                    <!--<ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/icoScan"
+                        android:src="@drawable/scan"
+                        android:layout_marginTop="5dp"/>-->
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/blockPointnya">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:id="@+id/icoPoint"
+                            android:src="@drawable/coint"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtYourPoint"
+                            android:text="Poin Anda"
+                            android:layout_toRightOf="@id/icoPoint"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtPoint"
+                            android:text="0"
+                            android:layout_toRightOf="@id/icoPoint"
+                            android:layout_below="@id/txtYourPoint"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="10dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/blockFreeOngkir"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtFreeOngkir"
+                            android:text="Mau gratis ongkir?"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtLoginYuk"
+                            android:layout_toRightOf="@id/txtFreeOngkir"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Login Yuk!"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTitlePromo"
+                android:layout_below="@id/blockHeader"
+                android:text="Promo Minggu Ini"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/blockPromo"
+                android:layout_below="@id/txtTitlePromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/barisanPromo">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtBestSeller"
+                android:layout_below="@id/blockPromo"
+                android:text="Paling Laku"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/blockBestSeller"
+                android:layout_below="@id/txtBestSeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/barisanBestSeller">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPaket"
+                android:layout_below="@id/blockBestSeller"
+                android:text="Paket Terbaik Untuk Anda"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/blockPaket"
+                android:layout_below="@id/txtPaket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/barisanPaket">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtKategori"
+                android:layout_below="@id/blockPaket"
+                android:text="Kategori"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/blockKategori"
+                android:layout_below="@id/txtKategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/barisanKategori">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/bannerTop"
+                android:src="@drawable/banner_horeka"
+                android:layout_below="@id/blockKategori"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/bannerBottom"
+                android:src="@drawable/banner_salad"
+                android:layout_below="@id/blockBestSeller"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtKatalogProduk"
+                android:text="Katalog Produk"
+                android:layout_below="@id/blockKategori"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockKatalogProduk"
+                android:layout_below="@id/txtKatalogProduk"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        app:itemIconSize="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        app:itemIconTint="@android:color/white"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ventures.g45.kebunsehati">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".KebunSehati"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Inbox"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchingResult"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Point"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailOrder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UserAccount" />
+        <activity android:name=".RiwayatOrder" />
+        <activity
+            android:name=".Category"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlacingOrder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ChangeAddress"
+            android:label="@string/title_activity_change_address" />
+        <activity
+            android:name=".Shipping"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VoucherList"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShoppingCart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".KSFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OneTimePassword"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignIn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

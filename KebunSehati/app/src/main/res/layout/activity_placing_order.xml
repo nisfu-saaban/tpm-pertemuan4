@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/icoCheck"
+                android:src="@drawable/check"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSuccess"
+                android:layout_below="@id/icoCheck"
+                android:layout_margin="20dp"
+                android:text="Yay... Pesanan kamu sudah kami terima dan akan segera kami persiapkan."
+                android:textSize="16dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLanjutkan"
+                android:text="Lanjutkan"
+                android:layout_below="@id/txtSuccess"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

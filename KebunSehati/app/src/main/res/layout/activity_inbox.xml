@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockHeader"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/icoBack"
+            android:src="@drawable/back"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:text="Inbox"
+            android:textSize="18dp"
+            android:layout_toRightOf="@id/icoBack"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/blockHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockVoucher"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/icoNoInbox"
+                    android:src="@drawable/no_message"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNoInbox"
+                    android:layout_below="@id/icoNoInbox"
+                    android:layout_marginTop="20dp"
+                    android:text="Inbox anda kosong"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/holo_red_dark"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

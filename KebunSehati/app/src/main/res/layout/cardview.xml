@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_margin="5dp"
+        android:id="@+id/cvRiwayatOrder">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blockRingkasan">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:text="selesai"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/waktuOrder"
+                android:layout_below="@id/status"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:text="20 Oktober 2019" />
+
+            <TextView
+                android:id="@+id/idOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_below="@id/waktuOrder"
+                android:text="Nomor Order" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/totalOrder"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Total"
+                android:layout_below="@id/idOrder" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

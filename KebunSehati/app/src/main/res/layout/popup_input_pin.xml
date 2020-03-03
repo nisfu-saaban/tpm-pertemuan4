@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:text="Isikan PIN Anda"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockInputPIN"
+        android:layout_below="@id/txtTitle"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpPin"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint="0 0 0 0 0 0"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="6"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPin"
+        android:layout_below="@id/blockInputPIN"
+        android:background="@color/colorPrimaryDark"
+        android:text="Lanjutkan"
+        android:textSize="14dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

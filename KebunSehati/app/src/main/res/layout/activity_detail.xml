@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockHeader"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/icoBack"
+                    android:src="@drawable/back"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inpSearch"
+                    android:layout_toRightOf="@id/icoBack"
+                    android:hint="Cari Apel Malang"
+                    android:background="@drawable/edittext_border_abuabu"
+                    android:drawableLeft="@drawable/search"
+                    android:drawablePadding="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:textSize="14dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/icoShare"
+                    android:layout_toLeftOf="@id/icoCart"
+                    android:src="@drawable/share"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:onClick="shareProduk"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/icoCart"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/cart"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTotalCart"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@android:color/white"
+                    android:text="99"
+                    android:textSize="10dp"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="1dp"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/imgProduk"
+                android:layout_below="@id/blockHeader"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/noimage"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaProduk"
+                android:layout_below="@+id/imgProduk"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hargaProduk"
+                android:layout_below="@+id/namaProduk"
+                android:textSize="16dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/lineProduk"
+                android:layout_below="@id/hargaProduk"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blockBeratLabelOngkir"
+                android:layout_below="@+id/lineProduk"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/txtNilaiBerat"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSatuanBerat"
+                        android:layout_below="@id/txtNilaiBerat"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13dp"
+                        android:textAlignment="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imgLabel"
+                        android:src="@drawable/noimage"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtLabel"
+                        android:layout_below="@id/imgLabel"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13dp"
+                        android:textAlignment="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imgDelivery"
+                        android:src="@drawable/pengiriman"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDelivery"
+                        android:layout_below="@id/imgDelivery"
+                        android:layout_marginTop="5dp"
+                        android:text="Pengiriman"
+                        android:textSize="13dp"
+                        android:textAlignment="center"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/lineInfo"
+                android:layout_below="@id/blockBeratLabelOngkir"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTitleInfo"
+                android:layout_below="@id/lineInfo"
+                android:layout_marginTop="20dp"
+                android:text="Informasi Produk"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtInfoProduk"
+                android:layout_below="@id/txtTitleInfo"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTitleLainnya"
+                android:layout_below="@id/txtInfoProduk"
+                android:text="Produk Lainnya"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/blockBestSeller"
+                android:layout_below="@id/txtTitleLainnya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:scrollbars="none"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/barisanProdukLainnya">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blockButtonBeli"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:background="#33000000">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/icoWA"
+            android:src="@drawable/ico_wa"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:id="@+id/btnBeli"
+            android:layout_alignParentRight="true"
+            android:text="Beli Sekarang"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:drawablePadding="5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/icoBack"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleSearching"
+            android:layout_toRightOf="@id/icoBack"
+            android:layout_marginLeft="20dp"
+            android:text="Pencarian"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inpSearching"
+            android:layout_below="@id/txtTitleSearching"
+            android:hint="Apa yang ingin anda cari?"
+            android:background="@drawable/edittext_border_abuabu"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitleTranding"
+            android:text="Paling Banyak Dicari"
+            android:layout_below="@id/inpSearching"
+            android:layout_marginTop="20dp"
+            android:textSize="16dp"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitleTranding"
+            android:layout_marginTop="10dp"
+            app:flexWrap="wrap"
+            app:alignItems="stretch"
+            app:alignContent="stretch" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salad Buah"
+                android:tag="Salad Buah"
+                android:background="@drawable/border"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="Mencari"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salad Sayur"
+                android:tag="Salad Sayur"
+                android:background="@drawable/border"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="Mencari"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plecing"
+                android:tag="Plecing"
+                android:background="@drawable/border"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="Mencari"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buah Segar"
+                android:tag="Buah Segar"
+                android:background="@drawable/border"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="Mencari"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sayur Sop"
+                android:tag="Sayur Sop"
+                android:background="@drawable/border"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="Mencari"
+                android:clickable="true"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
